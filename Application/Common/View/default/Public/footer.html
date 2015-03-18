@@ -1,0 +1,29 @@
+<div class="footer-jumbotron footer_bar hide">
+    <div class="container">
+        <div class="row">
+            <notempty name="icp">
+                <div class="col-xs-6">备案号：<a href="http://www.miitbeian.gov.cn/" target="_blank">
+                    {:C('WEB_SITE_ICP')}</a>
+                </div>
+            </notempty>
+            <div class="col-md-12">
+                {$count_code}
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+</div>
+<div>
+    {:C('COUNT_CODE')}
+</div>
+<include file="Public/js"/>
+
+<block name="script"><!-- 用于加载js代码 --></block>
+
+<!-- 页面footer钩子，一般用于加载插件JS文件和JS代码 -->
+{:hook('pageFooter', 'widget')}
+<div class="hidden"><!-- 用于加载统计代码等隐藏元素 -->
+    <block name="hidden"></block>
+</div>
